@@ -1,0 +1,1 @@
+/Users/mac/Documents/DemoAndroidProjects/HTTM/sdk/build/intermediates/cxx/RelWithDebInfo/1fe1f44a/obj/arm64-v8a

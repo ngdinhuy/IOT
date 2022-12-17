@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.httm.view.HomeFragment"
+        android:label="HomeFragment"
+        tool:layout="@layout/fragment_home"
+        >
+        <action
+            android:id="@+id/action_homeFragment_to_previewFragment"
+            app:destination="@id/previewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/previewFragment"
+        android:name="com.example.httm.view.PreviewFragment"
+        android:label="PreviewFragment"
+        tool:layout="@layout/fragment_preview"
+        >
+        <argument
+            android:name="base64"
+            app:argType="string"
+            android:defaultValue=""
+            />
+        <action
+            android:id="@+id/action_previewFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_homeFragment" app:destination="@id/homeFragment" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.httm.view.ResultFragment"
+        android:label="ResultFragment"
+        tool:layout="@layout/fragment_result"
+        >
+        <argument
+            android:name="username"
+            app:argType="string"
+            android:defaultValue='' />
+        <argument
+            android:name="msv"
+            app:argType="string"
+            android:defaultValue='' />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.httm.view.MainFragment"
+        android:label="MainFragment"
+        tool:layout="@layout/fragment_main"
+        />
+</navigation>
